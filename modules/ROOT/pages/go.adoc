@@ -4,7 +4,7 @@
 :author: Neo4j
 :programming-language: golang
 :category: drivers
-:tags: golang, go, app-development, applications
+:tags: golang, go, app-development, applications, ogm
 :description: If you are a Go developer, this guide provides an overview of options for connecting to Neo4j. While this guide is not comprehensive it will introduce the different drivers and link to the relevant resources.
 
 .Goals
@@ -31,6 +31,29 @@ include::./_includes/go-driver.adoc[]
 include::./_includes/sample_project.adoc[]
 
 include::./_includes/community-driver-notice.adoc[]
+
+[#golang-gogm]
+=== GoGM - Golang Object Graph Mapper
+
+This OGM implementation is based off of the java ogm. Due to some limitations of golang generics we included a cli to generate linking functions
+
+Features
+
+* Struct Mapping through the gogm struct decorator
+* Full support for ACID transactions
+* Underlying connection pooling
+* Custom queries in addition to built in functionality
+* CLI to generate link and unlink functions for gogm structs.
+* Multi database support with Neo4j v4
+
+[cols="1,4"]
+|===
+| icon:user[] Author | https://github.com/erictg[Eric Solender^], https://github.com/nikitawootten[Nikita Wootten^]
+// | icon:gift[] Package |
+| icon:github[] Source | https://github.com/mindstand/gogm
+| icon:book[] Docs | https://github.com/mindstand/gogm/tree/master/README.md
+| icon:play-circle[] Example Project | https://github.com/mindstand/gogm-example
+|===
 
 [#golang-bolt]
 === Golang Neo4J Bolt Driver
